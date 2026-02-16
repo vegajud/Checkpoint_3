@@ -18,7 +18,7 @@ deploymentTarget = "cloudrun"
 expertMode = true
 
 [workflows]
-runButton = "Project"
+runButton = "Run Python"
 
 [[workflows.workflow]]
 name = "Project"
@@ -32,10 +32,11 @@ args = "Run Python"
 [[workflows.workflow]]
 name = "Run Python"
 author = "agent"
+mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python main.py"
+args = "python checkpoint_3.py"
 
 [workflows.workflow.metadata]
 outputType = "console"
